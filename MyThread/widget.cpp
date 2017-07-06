@@ -26,8 +26,9 @@ void Widget::S_init()
     ui->progressBar->setRange(0,100);
     ui->progressBar->setValue(0);
     connect(ui->pushButton,SIGNAL(clicked(bool)),this,SLOT(startThread()));
-    connect(ui->pushButton_2,SIGNAL(clicked(bool)),this,SIGNAL(stopThread()));
-    connect(ui->pushButton_3,SIGNAL(clicked(bool)),this,SIGNAL(restartThread()));
+    //connect(ui->pushButton_2,SIGNAL(clicked(bool)),this,SIGNAL(stopThread()));//如果两个类中没有包含及一个类中没有另个类的实例，则需要父窗口转发
+    connect(ui->pushButton_2,SIGNAL(clicked(bool)),m_workerThread,SLOT(stop()));//此问题中，父类中有m_workThread对象，既可以直接发送信号调用槽函数
+    connect(ui->pushButton_3,SIGNAL(clicked(bool)),m_workerThread,SLOT(stop()));
     connect(ui->pushButton_3,SIGNAL(clicked(bool)),this,SLOT(startThread()));
     connect(m_workerThread,SIGNAL(resultReady(int)),this,SLOT(handleResults(int)));
 

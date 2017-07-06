@@ -7,4 +7,5 @@ SUBDIRS += \
     testEvent \
     Dialogex \
     modelTest \
-    exclTest
+    exclTest \
+    Tdelegate

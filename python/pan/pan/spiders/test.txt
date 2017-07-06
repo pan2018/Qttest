@@ -1,0 +1,47 @@
+{'title': u'
+<div id="tracking-area">\n
+<div id="tracking-area">\n
+	<div id="title">Track your Wish package</div>\n
+	<div id="sub-title">Enter up to 20 tracking numbers, one on each new line.</div>\n
+	<div id="parent">\n<span id="text-box" class="left">\n\n<textarea id="search-tracking" placeholder="Example: 12345678900" class="form-control">\n
+</textarea>\n\n
+</span>\n
+<span id="abc">\n<img id="search-tracking-btn" src="http://wishpost.wish.com/static/img/search_ico.svg?v=da5150">\n</span>\n
+</div>\n
+</div>\n
+<div id="search-result">\n
+<div id="search-result-header">\n
+</div>\n<div id="search-result-table">\n<img src="http://wishpost.wish.com/static/img/ajax-loader-ball.gif?v=409610" class="loading-spinner">\n
+</div>\n
+</div>\n
+<br><br>\n
+</div>'
+}
+2017-06-20 11:41:29 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.shpostwish.com/tracking>
+{'title': u'<div id="tracking-area">\n<div id="title">Track your Wish package</div>\n<div id="sub-title">Enter up to 20 tracking numbers, one on each new line.</div>\n<div id="parent">\n<span id="text
+-box" class="left">\n\n<textarea id="search-tracking" placeholder="Example: 12345678900" class="form-control">\n</textarea>\n\n</span>\n<span id="abc">\n<img id="search-tracking-btn" src="http://wishp
+ost.wish.com/static/img/search_ico.svg?v=da5150">\n</span>\n</div>\n</div>'}
+
+
+
+https://www.trackingmore.com/wishpost-tracking/cn.html
+https://track.trackingmore.com/wishpost/cn-WI00007433180SH.html?
+
+WI00007099855SH
+
+LM413299111CN
+response.xpath('//strong/text()')   #获取说有的时间
+
+
+
+
+
+
+
+
+
+
+
+
+
+

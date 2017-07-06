@@ -6,15 +6,16 @@ ClientThread::ClientThread(QObject *parent):QThread(parent),m_bStopped(false)
 {
     qDebug()<<"worker thread:"<<QThread::currentThreadId();
     nValue = 0;
-    connect(parent,SIGNAL(stopThread()),this,SLOT(stop()));
-    connect(parent,SIGNAL(restartThread()),this,SLOT(restartT()));
+    //connect(parent,SIGNAL(stopThread()),this,SLOT(stop()));
+    //connect(parent,SIGNAL(restartThread()),this,SLOT(restartT()));
 }
 
 ClientThread::~ClientThread()
 {
     qDebug()<<"~ClientTrhead";
-   // nValue = 101;
-    stop();
+    nValue = 101; //设置退出标志
+    m_bStopped = true;
+    //stop();
     quit();
     wait();
 }
@@ -25,7 +26,13 @@ void ClientThread::stop()
     qDebug()<<"对象名:"<<QObject::sender();
     qDebug() << "Worker Stop Thread : " << QThread::currentThreadId();
     QMutexLocker locker(&m_mutex);
-    m_bStopped = true;
+    if(QString::compare(QObject::sender()->objectName(),"pushButton_3")==0){
+        m_bStopped = false;
+        return ;
+    }else if(QString::compare(QObject::sender()->objectName(),"pushButton_2")==0){
+        m_bStopped = true;
+        return ;
+    }
 }
 
 void ClientThread::restartT()
