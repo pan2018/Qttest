@@ -6,7 +6,7 @@
 #include <stdio.h>  
 #include <string.h>  
 #include <sys/sem.h>  
-  
+ // hello
 union semun  
 {  
     int val;  
