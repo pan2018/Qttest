@@ -14,9 +14,11 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         widget.cpp \
-    spinboxdelegate.cpp
+    spinboxdelegate.cpp \
+    moder.cpp
 
 HEADERS  += widget.h \
-    spinboxdelegate.h
+    spinboxdelegate.h \
+    moder.h
 
 FORMS    += widget.ui

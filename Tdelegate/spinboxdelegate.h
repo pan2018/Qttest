@@ -1,3 +1,4 @@
+//自定义代理类
 #ifndef SPINBOXDELEGATE_H
 #define SPINBOXDELEGATE_H
 
@@ -8,6 +9,7 @@
 #include <QSpinBox>
 #include <QString>
 #include <QStringList>
+#include "moder.h"
 class SpinBoxDelegate : public QItemDelegate
 {
     Q_OBJECT
@@ -29,7 +31,8 @@ signals:
 private slots:
     void showDate();
 private:
-    QStringList *list;
+    QList<moder> *list;
+    moder mod;
 };
 
 #endif // SPINBOXDELEGATE_H

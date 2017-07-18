@@ -13,7 +13,7 @@ qt2d::qt2d(QWidget *parent) :
     image.fill(backColor);
 
     Paint();
-   // Paint_zx();
+    Paint_zx();
 
 }
 

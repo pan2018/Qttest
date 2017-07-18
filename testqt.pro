@@ -8,4 +8,5 @@ SUBDIRS += \
     Dialogex \
     modelTest \
     exclTest \
-    Tdelegate
+    Tdelegate \
+    basetest

@@ -36,6 +36,7 @@ void SpinBoxDelegate::setModelData(QWidget *editor, QAbstractItemModel *model, c
     //判断链表中是否已添加了该行数据，如果没有则根据行号,填入不重复项数据和修改数据，如果有则将修改项赋值到已有项(此处不会保存到数据库，
     //需要点击提交才会将整个链表更新到数据库中。)
       //QModelIndex transposedIndex = createIndex(index.column(),2);
+    //需要判断数据结构类型，此处将一行建立一个模型，一行中任意一个元素更改，就将这行数据添加到更新链表中。
 }
 
 void SpinBoxDelegate::updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const
